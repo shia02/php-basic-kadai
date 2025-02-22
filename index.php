@@ -23,6 +23,17 @@
          }
        }
 
+       class Event {
+         private $name;
+         private $date;
+         private $location;
+         public function __construct(string $name, $date, string $location) {
+            $this->name = $name;
+            $this->date = new DateTime($date);
+            $this->location = $location;
+         }
+       }
+
        echo greet_user('');
        echo greet_user('sano');
        ?>
